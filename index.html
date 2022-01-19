@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter app/shortlisting task</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>CounterApp</h1>
+           
+            <span id="counter" class="counter-text">0</span>
+            
+            <button id= "increase" class="button ">  <i class="fa fa-plus "></i>  Increment</button>
+            <button id="decrease" class="button"> <i class="fa fa-minus "></i>  Decrement</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+    
+        var drawCounter = function () {
+             document.getElementById('counter').innerHTML = store.counter
+         }
+
+        var bindEvents = function () {
+            document.getElementById('increase').addEventListener('click', function () {
+                increase()
+                drawCounter()
+        })
+        document.getElementById('decrease').addEventListener('click', function () {
+              decrease()
+              drawCounter()
+        }) 
+        }
+
+
+        var store = {
+            counter: 0  
+        }
+
+
+
+        var init = function () {
+           bindEvents()
+           drawCounter()  
+        }
+
+        init()        
+    </script>
+</body>
+</html>
